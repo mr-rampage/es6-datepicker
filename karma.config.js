@@ -25,7 +25,7 @@ module.exports = function (config) {
       module: {
         preLoaders: [
           {
-            test: /-test\.js$/,
+            test: /\.spec\.js$/,
             include: /src/,
             exclude: /(bower_components|node_modules)/,
             loader: 'babel',
@@ -36,7 +36,7 @@ module.exports = function (config) {
           {
             test: /\.js?$/,
             include: /src/,
-            exclude: /(node_modules|bower_components|__tests__)/,
+            exclude: /(node_modules|bower_components|\.spec\.js$)/,
             loader: 'babel-istanbul',
             query: {
               cacheDirectory: true,
@@ -47,7 +47,7 @@ module.exports = function (config) {
           {
             test: /\.js$/,
             include: path.resolve(__dirname, '../src'),
-            exclude: /(bower_components|node_modules|__tests__)/,
+            exclude: /(bower_components|node_modules|\.spec\.js$)/,
             loader: 'babel',
             query: {
               cacheDirectory: true,
