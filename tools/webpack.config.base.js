@@ -7,8 +7,8 @@ module.exports = {
     }],
   },
   output: {
-    libraryTarget: 'umd',
-    library: 'calendar',
+    libraryTarget: 'var',
+    library: 'datepicker',
   },
   resolve: {
     extensions: [
