@@ -1,14 +1,18 @@
-import { log } from './datepicker/application/decorators/log';
-import { render } from './datepicker/application/decorators/render';
-import { toDates } from './datepicker/application/adapter/month.adapter';
-import { renderTable } from './datepicker/application/adapter/html-table.adapter';
-import { datesByWeekInMonth } from './datepicker/domain/month';
+import { DatepickerComponent } from './datepicker/application/datepicker.component';
 
-@log('Test Class')
-@render(toDates, renderTable)
-class Test {
+const selected = new Date();
 
-}
+const d = new DatepickerComponent({
+  viewDate: new Date(),
+  selectedDate: selected,
+});
+console.info(d);
 
-const t = new Test();
-console.info(t.render(datesByWeekInMonth(new Date())));
+const f = d.viewDate;
+f.setFullYear(1990);
+
+console.info(f, d.viewDate);
+
+selected.setFullYear(1990);
+
+console.info(selected, d.selectedDate);
