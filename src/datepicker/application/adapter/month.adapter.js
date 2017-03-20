@@ -2,6 +2,6 @@ function dayAdapter(day) {
   return day.getDate();
 }
 
-export function monthAdapter(month) {
+export function toDates(month) {
   return month.map(week => week.map(dayAdapter));
 }

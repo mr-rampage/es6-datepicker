@@ -1,7 +1,7 @@
-import { listDaysInMonth } from './month';
+import { datesByWeekInMonth } from './month';
 
-describe('listDaysInMonth', () => {
-  const daysInMonth = listDaysInMonth(new Date('2000-01-09'));
+describe('datesByWeekInMonth', () => {
+  const daysInMonth = datesByWeekInMonth(new Date('2000-01-09'));
 
   it('should have 4 weeks in January 1, 2000', () => {
     expect(daysInMonth.length).toBe(6);

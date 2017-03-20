@@ -5,20 +5,20 @@ const nextWeek = date => addDays(date, 7);
 const firstDayOfMonth = date => addDays(date, -date.getDate() + 1);
 const sundayWeekOf = date => addDays(date, -date.getDay());
 
-function listDaysInWeek(date, ...week) {
+function daysInWeek(date, ...week) {
   if (week.length === 0 && date.getDay() !== 0) {
-    return listDaysInWeek(sundayWeekOf(date));
+    return daysInWeek(sundayWeekOf(date));
   } else if (date.getDay() !== 6) {
-    return listDaysInWeek(nextDay(date), ...week, date);
+    return daysInWeek(nextDay(date), ...week, date);
   }
   return [...week, date];
 }
 
-export function listDaysInMonth(date, month = null, ...weeks) {
+export function datesByWeekInMonth(date, month = null, ...weeks) {
   if (month === null) {
-    return listDaysInMonth(firstDayOfMonth(date), date.getMonth());
+    return datesByWeekInMonth(firstDayOfMonth(date), date.getMonth());
   } else if (month === sundayWeekOf(nextWeek(date)).getMonth()) {
-    return listDaysInMonth(nextWeek(date), month, ...weeks, listDaysInWeek(date));
+    return datesByWeekInMonth(nextWeek(date), month, ...weeks, daysInWeek(date));
   }
-  return [...weeks, listDaysInWeek(date)];
+  return [...weeks, daysInWeek(date)];
 }
