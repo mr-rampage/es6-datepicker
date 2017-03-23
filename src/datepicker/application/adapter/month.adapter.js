@@ -1,5 +1,5 @@
 function dayAdapter(day) {
-  return day.getDate();
+  return day.getUTCDate();
 }
 
 export function toDates(month) {
