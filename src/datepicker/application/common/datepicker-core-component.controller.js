@@ -7,4 +7,8 @@ export class DatepickerCoreComponentController {
     this.viewDate = viewDate;
     this.selectedDate = selectedDate;
   }
+
+  get html() {
+    return `<div></div>`;
+  }
 }
