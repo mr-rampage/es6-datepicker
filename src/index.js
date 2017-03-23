@@ -1,8 +1,8 @@
-import { DatepickerComponent } from './datepicker/application/datepicker.component';
+import { DateSelectorComponent } from './datepicker/application/date-selector.component';
 
 const selected = new Date();
 
-const d = new DatepickerComponent({
+const d = new DateSelectorComponent({
   viewDate: new Date(),
   selectedDate: selected,
 });

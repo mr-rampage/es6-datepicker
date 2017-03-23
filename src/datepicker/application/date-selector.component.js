@@ -5,7 +5,7 @@ import { immutableDates } from './decorators/immutable-dates';
 
 @renderable(toDates, renderTable)
 @immutableDates('viewDate')
-export class DatepickerComponent {
+export class DateSelectorComponent {
   constructor(config = {}) {
     const { viewDate, selectedDate } = config;
     this.viewDate = viewDate;
