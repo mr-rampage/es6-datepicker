@@ -1,11 +1,15 @@
 import { DatepickerController } from '../datepicker.controller';
 
 export class MonthSelectorController extends DatepickerController {
+  get month() {
+    return this.viewDate.getUTCMonth();
+  }
+
   get next() {
-    return this.viewDate.getUTCMonth() + 1;
+    return this.month + 1;
   }
 
   get previous() {
-    return this.viewDate.getUTCMonth() - 1;
+    return this.month - 1;
   }
 }
