@@ -1,4 +1,4 @@
-import { datesByWeekInMonth } from './month';
+import { datesByWeekInMonth } from './date-selector.domain';
 
 describe('datesByWeekInMonth', () => {
   const daysInMonth = datesByWeekInMonth(new Date('2000-01-09'));

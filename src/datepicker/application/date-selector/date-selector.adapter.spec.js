@@ -1,4 +1,4 @@
-import { toDates } from './month.adapter';
+import { toDates } from './date-selector.adapter';
 
 describe('MonthAdapter', () => {
   it('should convert a matrix of dates into a matrix of days', () => {

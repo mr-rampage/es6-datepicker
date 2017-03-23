@@ -1,4 +1,4 @@
-import { DateSelectorComponent } from './datepicker/application/date-selector.component';
+import { DateSelectorComponent } from './datepicker/application/datepicker.controller';
 
 const selected = new Date();
 
