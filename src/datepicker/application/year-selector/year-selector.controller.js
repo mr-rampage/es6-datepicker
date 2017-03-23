@@ -1,6 +1,6 @@
-import { DatepickerController } from '../datepicker.controller';
+import { DatepickerCoreComponentController } from '../common/datepicker-core-component.controller';
 
-export class YearSelectorController extends DatepickerController {
+export class YearSelectorController extends DatepickerCoreComponentController {
   get year() {
     return this.viewDate.getUTCFullYear();
   }

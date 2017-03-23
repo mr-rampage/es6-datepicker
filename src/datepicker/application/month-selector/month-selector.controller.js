@@ -1,6 +1,6 @@
-import { DatepickerController } from '../datepicker.controller';
+import { DatepickerCoreComponentController } from '../common/datepicker-core-component.controller';
 
-export class MonthSelectorController extends DatepickerController {
+export class MonthSelectorController extends DatepickerCoreComponentController {
   get month() {
     return this.viewDate.getUTCMonth();
   }

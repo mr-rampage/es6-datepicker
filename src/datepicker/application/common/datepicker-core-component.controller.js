@@ -1,7 +1,7 @@
 import { immutableDates } from './decorators/immutable-dates';
 
 @immutableDates('viewDate')
-export class DatepickerController {
+export class DatepickerCoreComponentController {
   constructor(config = {}) {
     const { viewDate, selectedDate } = config;
     this.viewDate = viewDate;
